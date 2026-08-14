@@ -1,0 +1,13 @@
+# Ferramentas locais
+.claude/
+.vercel/
+
+# Screenshots / rascunhos
+image.png
+
+# Dependências (não usadas, mas por segurança)
+node_modules/
+
+# Sistema
+Thumbs.db
+.DS_Store

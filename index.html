@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interfaces — uma linha do tempo</title>
+    <meta
+      name="description"
+      content="Ensaio visual contínuo sobre a evolução das interfaces computacionais, hardware e software."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
+  </head>
+  <body>
+    <div class="grao" aria-hidden="true"></div>
+    <div id="progresso" class="progresso"></div>
+
+    <!-- ===================== TOPO ===================== -->
+    <header class="topo">
+      <span class="mono">IHC / Interação Humano-Computador</span>
+      <span class="mono" id="relogio">--:--:-- BRT</span>
+      <span class="mono">Ensaio nº 01</span>
+    </header>
+
+    <!-- ===================== ABERTURA ===================== -->
+    <section class="abertura">
+      <p class="abertura__kicker mono">Um documento contínuo — role para percorrer</p>
+      <h1 class="abertura__titulo">
+        <span>A conversa</span>
+        <span>entre <em>humano</em></span>
+        <span>&amp; <span class="realce">máquina</span></span>
+      </h1>
+      <div class="abertura__baixo">
+        <p class="abertura__lead">
+          Sete décadas de interfaces — os pontos de contato pelos quais damos
+          ordens e recebemos respostas. Cada marco desta linha é lido por uma
+          pergunta simples: nasceu como
+          <b class="def def--hw">hardware</b>, o que se toca, ou como
+          <b class="def def--sw">software</b>, o que se vê na tela?
+        </p>
+        <div id="contadores" class="abertura__contadores"></div>
+      </div>
+    </section>
+
+    <!-- ===================== NOTA / LEGENDA ===================== -->
+    <section class="nota">
+      <div class="nota__col">
+        <span class="mono nota__rot">↳ Interface</span>
+        <p>
+          O ponto de encontro entre pessoa e computador. Pode ser
+          <b>física</b> — o mouse, o teclado, a tela que tocamos — ou
+          <b>lógica</b> — um sistema operacional, um mensageiro, um navegador
+          que aparece diante dos olhos.
+        </p>
+      </div>
+      <div class="nota__col">
+        <span class="mono nota__rot">↳ Leitura</span>
+        <p>
+          Cada avanço aproximou a língua da máquina da língua humana: do cartão
+          perfurado ao clique, do clique ao toque, do toque à voz e, enfim, à
+          conversa em linguagem natural.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== FILTROS ===================== -->
+    <nav class="filtros" aria-label="Filtrar registros por tipo">
+      <span class="mono filtros__rot">Recortar por</span>
+      <button class="filtro is-ativo" data-filtro="todos">Tudo</button>
+      <button class="filtro" data-filtro="hardware">
+        <span class="filtro__ponto filtro__ponto--hw"></span>Hardware
+      </button>
+      <button class="filtro" data-filtro="software">
+        <span class="filtro__ponto filtro__ponto--sw"></span>Software
+      </button>
+    </nav>
+
+    <!-- ===================== TIMELINE ===================== -->
+    <main
+      id="linha-do-tempo"
+      class="registros"
+      aria-label="Linha do tempo das interfaces"
+    >
+      <!-- preenchido por render.js -->
+    </main>
+
+    <!-- ===================== FIM ===================== -->
+    <footer class="fim">
+      <h2 class="fim__frase">
+        A próxima interface talvez seja <em>nenhuma</em> — só a intenção.
+      </h2>
+      <p class="mono fim__assinatura">
+        Fim do documento · IHC · <span id="ano-atual"></span>
+      </p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
