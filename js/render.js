@@ -18,7 +18,7 @@ function montarLinha(ev, indice, total) {
   const num = String(indice).padStart(2, "0");
   const tot = String(total).padStart(2, "0");
   const imgHtml = ev.imagem
-    ? `<div class="registro__imagem">
+    ? `<div class="registro__imagem registro__imagem--${ev.imgclasse || 'paisagem'}">
          <img src="${ev.imagem}" alt="${ev.imagemdesc || ev.titulo}" loading="lazy">
        </div>`
     : "";
