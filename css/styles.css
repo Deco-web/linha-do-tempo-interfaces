@@ -417,39 +417,17 @@ em {
 */
 .registro__imagem {
   margin-top: 1.1rem;
-  width: 100%;
-  max-width: 300px;
-  overflow: hidden;
-  border-radius: 2px;
-  border: 1px solid var(--linha);
-  background: var(--papel-2);
+  max-width: 260px;
 }
 .registro__imagem img {
   display: block;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center center;
+  height: auto;
+  border-radius: 2px;
+  border: 1px solid var(--linha);
   filter: grayscale(30%) contrast(1.05);
   transition: filter 0.3s var(--ease);
 }
-/* retratos: rosto fica no centro-topo */
-.registro__imagem--retrato img {
-  object-position: center 15%;
-}
-/* quadradas: centralizado */
-.registro__imagem--quadrada img {
-  object-position: center center;
-}
-/* paisagens: centralizado */
-.registro__imagem--paisagem img {
-  object-position: center center;
-}
-/* exceções manuais */
-.registro__imagem--engelbart img { object-position: center 20%; }
-.registro__imagem--tbl img        { object-position: center 25%; }
-.registro__imagem--tomlinson img  { object-position: center 20%; }
-
 .registro:hover .registro__imagem img {
   filter: grayscale(0%) contrast(1.1);
 }
