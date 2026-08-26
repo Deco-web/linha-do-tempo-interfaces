@@ -18,10 +18,10 @@ function montarLinha(ev, indice, total) {
   const num = String(indice).padStart(2, "0");
   const tot = String(total).padStart(2, "0");
   const imgHtml = ev.imagem
-    ? `<div class="registro__imagem registro__imagem--${ev.imgclasse || 'paisagem'}">
+    ? `<div class="registro__imagem">
          <img src="${ev.imagem}" alt="${ev.imagemdesc || ev.titulo}" loading="lazy">
        </div>`
-    : "";
+    : `<div></div>`;
   return `
     <article class="registro" data-tipo="${ev.tipo}" style="--i:${indice}">
       <div class="registro__indice">
@@ -42,8 +42,9 @@ function montarLinha(ev, indice, total) {
         </div>
         <h3 class="registro__titulo">${ev.titulo}</h3>
         <p class="registro__resumo">${ev.resumo}</p>
-        ${imgHtml}
       </div>
+
+      ${imgHtml}
 
       <div class="registro__linha" aria-hidden="true"></div>
     </article>
